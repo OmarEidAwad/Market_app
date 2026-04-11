@@ -7,11 +7,13 @@ import 'package:market_app/feature/home/ui/widgets/custom_category_row.dart';
 import 'package:market_app/feature/home/ui/widgets/product_item.dart';
 import 'package:market_app/feature/home/data/models/product_model.dart';
 import 'package:market_app/feature/home/ui/widgets/sliding_photos.dart';
+
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
   @override
   State<HomeScreenBody> createState() => _HomeScreenBodyState();
 }
+
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   List<ProductModel> product = [
     ProductModel(
@@ -53,6 +55,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
       }
     });
   }
+
   bool isSelected(ProductModel product) => basketList.contains(product);
   @override
   Widget build(BuildContext context) {
@@ -97,7 +100,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                     rate: item.rate,
                     rateCount: item.rateCount,
                     price: item.price,
-                    onTap: () { AddAndRemoveProduct(item); },
+                    onTap: () {
+                      AddAndRemoveProduct(item);
+                    },
                     icon: isSelected(item)
                         ? Icon(
                             CupertinoIcons.delete,
@@ -111,11 +116,14 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             ),
           ),
           verticalSpace(20),
-          CounterBasketItem(basketList: basketList, onDelete: (index) {
-            setState(() {
-              basketList.removeAt(index);
-            });
-          }),
+          CounterBasketItem(
+            basketList: basketList,
+            onDelete: (index) {
+              setState(() {
+                basketList.removeAt(index);
+              });
+            },
+          ),
           verticalSpace(20),
         ],
       ),

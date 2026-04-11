@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:market_app/core/helpers/spacing.dart';
+import 'package:market_app/core/routing/app_router.dart';
 import 'package:market_app/core/theiming/colors.dart';
 
 class CustomShowModalBottomSheet extends StatefulWidget {
@@ -104,7 +106,9 @@ class _CustomShowModalBottomSheetState
               backgroundColor: ColorsManager.primary,
               foregroundColor: ColorsManager.primary,
             ),
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(AppRoute.checkoutScreen);
+            },
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
