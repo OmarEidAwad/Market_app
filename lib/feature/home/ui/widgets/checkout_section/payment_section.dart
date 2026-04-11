@@ -33,29 +33,6 @@ class PaymentSection extends StatelessWidget {
           radioTile("Apple Pay", 1, isPaymentSelected, onChanged),
           radioTile("Visa", 2, isPaymentSelected, onChanged),
 
-          //Row( mainAxisSize: MainAxisSize.max,
-          //     children: [
-          //   Expanded(child: CheckboxListTile(title: Text("Cash"),value: isCashedSelected,activeColor: ColorsManager.primary,onChanged: onChanged,))
-          // ],
-          //     ),
-          //     Row(
-          //       children:  [
-          //         Icon(Icons.payment),
-          //         SizedBox(width: 10),
-          //         Text(PaymentName),
-          //         Spacer(),
-          //         Icon(Icons.chevron_right),
-          //       ],
-          //     ),verticalSpace(12),
-          //        Row(
-          //       children:  [
-          //         Icon(Icons.payment),
-          //         SizedBox(width: 10),
-          //         Text(PaymentName2),
-          //         Spacer(),
-          //         Icon(Icons.chevron_right),
-          //       ],
-          //     ),
         ],
       ),
     );

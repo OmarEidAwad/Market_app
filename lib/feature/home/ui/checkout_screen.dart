@@ -7,24 +7,27 @@ class CheckoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        scrolledUnderElevation: 0,
-        automaticallyImplyLeading: true,
+    return GestureDetector(      onTap: () => FocusScope.of(context).unfocus(),
+
+      child: Scaffold(
         backgroundColor: Colors.white,
-        title: Text(
-          'Checkout',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
+        appBar: AppBar(
+          scrolledUnderElevation: 0,
+          automaticallyImplyLeading: true,
+          backgroundColor: Colors.white,
+          title: Text(
+            'Checkout',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+            ),
           ),
+          centerTitle: true,
+          actions: [Icon(Icons.receipt_long), horizontalSpace(16)],
         ),
-        centerTitle: true,
-        actions: [Icon(Icons.receipt_long), horizontalSpace(16)],
+        body: CheckoutScreenBody(),
       ),
-      body: CheckoutScreenBody(),
     );
   }
 }

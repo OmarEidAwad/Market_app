@@ -9,29 +9,32 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        scrolledUnderElevation: 0,
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            SvgPicture.asset('assets/icons/motor.svg', width: 12.w, height: 12),
-            Text(
-              "   61 Hopper street.. ",
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-            ),
-            Icon(Icons.keyboard_arrow_down_rounded, size: 20),
-            Spacer(),
-            SvgPicture.asset('assets/icons/basket.svg', width: 16.w, height: 16),
-          ],
-        ),
-        centerTitle: true,
+    return GestureDetector(      onTap: () => FocusScope.of(context).unfocus(),
 
-        //  leading: SizedBox.shrink(),
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          scrolledUnderElevation: 0,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          title: Row(
+            children: [
+              SvgPicture.asset('assets/icons/motor.svg', width: 12.w, height: 12),
+              Text(
+                "   61 Hopper street.. ",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              Icon(Icons.keyboard_arrow_down_rounded, size: 20),
+              Spacer(),
+              SvgPicture.asset('assets/icons/basket.svg', width: 16.w, height: 16),
+            ],
+          ),
+          centerTitle: true,
+      
+          //  leading: SizedBox.shrink(),
+        ),
+        body: HomeScreenBody(),
       ),
-      body: HomeScreenBody(),
     );
   }
 }

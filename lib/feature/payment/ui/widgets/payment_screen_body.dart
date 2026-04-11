@@ -57,11 +57,11 @@ class _PaymentScreenBodyState extends State<PaymentScreenBody> {
                     ),
                   ),
                   cardHolderDecoration: InputDecoration(
-                    hintText: "Card Number",
-                    counterStyle: TextStyle(color: Colors.black),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
-                    ),
+                    hintText: "Card Name",
+                    // counterStyle: TextStyle(color: Colors.black),
+                    // focusedBorder: UnderlineInputBorder(
+                    //   borderSide: BorderSide(color: Colors.black),
+                    // ),
                   ),
                   cvvCodeDecoration: InputDecoration(
                     hintText: "CVV",
